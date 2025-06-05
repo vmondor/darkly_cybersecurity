@@ -1,0 +1,14 @@
+use Security Misconfiguration || UPLOAD
+Process:
+    - Go to add image (?page=upload)
+    - Try wich extension is accepted (jpeg, jpg)
+    - Send a file with .php.jpeg | accepted but nothing happens
+    - Then with curl send a file .php with type .jpeg or .jpg (curl -F "uploaded=@images/shell.php;type=image/jpeg" -F "Upload=Upload" "http://192.168.56.101/?page=upload")
+    - Get the flag
+
+Secure:
+    - Verify extension (front/back)
+    - Accept only the right extension for the use of the file upload
+    - verify content-type of the file (MIME-type)
+    - change the name of the file upload
+    - Implement a maximum length for the file

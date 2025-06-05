@@ -1,0 +1,21 @@
+use broken access controle && Cryptographic Failures (URL discovery attack)
+weak passwd
+Process:
+    - Check robots.txt
+    - Go to /whatever
+    - Download httpasswd => (root:437394baff5aa33daa618be47b75cb49)
+    - Decrypt (md5) (437394baff5aa33daa618be47b75cb49 = qwerty123@)
+    - Go to /admin
+    - Use root and qwerty123@
+    - Get the flag
+
+Secure:
+    - Make sure the /admin page is denied by client user (and all the other sensitive page)
+    - Config file in web server (exemple nginx : /admin {
+                                                    redirect 404
+                                                  })
+    - Use Cryptographic tools more advanced (bcrypt)
+    - Use a strong password
+
+
+    

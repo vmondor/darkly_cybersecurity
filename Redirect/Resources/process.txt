@@ -1,0 +1,10 @@
+Use Open Redirection
+Process:
+    - Home page
+    - Inspect
+    - (Edit as html) Change facebook button href="index.php?page=redirect&amp;site=google"
+    - Get the flag
+
+Secure:
+    - Use a whitelist of url
+    - change the full url to a relatif url or crypt the url

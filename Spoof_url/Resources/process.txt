@@ -1,0 +1,13 @@
+Use Insecure design && CSRF fail
+USER AGENT AND REFERER
+Process:
+    - Go to albatroz page
+    - Inspect element
+    - Read the comment
+    - We need to use ft_bornToSec as a User-Agent and we need to come https://www.nsa.gov as a Referer
+    - curl -X GET "http://192.168.56.101/?page=b7e44c7a40c5f80139f0a50f3650fb2bd8d00b0d24667c4c2ca32c88e13b758f" -A 'ft_bornToSec' --referer https://www.nsa.gov/
+    - Get the flag
+
+Secure:
+    - Check the referer (all the request must come from the site)
+    - deliver a CSRF token

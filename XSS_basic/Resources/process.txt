@@ -1,0 +1,8 @@
+Use injection XSS Stored
+Process :
+    - Broken flag
+    - "alert" get you the flag
+
+Secure:
+    - Escape special char manualy or use framework (lastest version) that check and escape special char
+    - Don't accept in input special char

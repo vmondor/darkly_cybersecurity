@@ -1,0 +1,11 @@
+Use Insecure design
+SURVEY
+Process:
+    - Go to survey page
+    - Inspect
+    - Edit input value 10 to 11
+    - Submit value 11
+    - Get the flag
+
+Secure:
+    - Verify that the form take in input a good value (back)

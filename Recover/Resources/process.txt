@@ -1,0 +1,13 @@
+Use Insecure design
+Process:
+    - Go to Sign in
+    - Go to I forgot password
+    - Inspect and reveal the html hidden
+    - Edit mail (15 char)
+    - Submit
+    - Get the flag
+
+
+Secure:
+    - Check all the input in the form
+    - Verify that the mail exist and use 2FA (send a link to change/recover password on the mail)

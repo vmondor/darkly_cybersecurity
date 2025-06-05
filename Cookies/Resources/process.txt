@@ -1,0 +1,14 @@
+Use Cryptographic Failures && Insecure Design || Security Misconfiguration
+cookie weak encryption
+Process :
+    - Go to Application
+    - Found the "I_am_admin" cookie
+    - Decrypt (md5) the cookie (68934a3e9455fa72420237eb05902327 = false)
+    - Crypt "true" in md5
+    - Change the "I_am_admin" cookie by true (crypt in md5)
+    - Reload the page
+    - Get the flag
+
+Secure:
+    - Don't store sensitive data into cache
+    - Use more advance Cryptographic tools (bcrypt)

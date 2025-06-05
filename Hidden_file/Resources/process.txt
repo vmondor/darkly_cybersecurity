@@ -1,0 +1,8 @@
+Use Script to collect all README file
+Process:
+    - Use hidden.py 
+    - /.hidden/whtccjokayshttvxycsvykxcfm/igeemtxnvexvxezqwntmzjltkt/lmpanswobhwcozdqixbowvbrhw/
+
+Secure: 
+    - Denied /.hidden to client
+    - Don't store sensitive data like that
